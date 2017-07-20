@@ -21,6 +21,9 @@ gem 'puma', '~> 3.0'
 
 gem 'chordpro'
 
+# use foreman to manage multiple processes
+gem 'foreman'
+
 # gem 'capistrano-rails', group: :development
 gem 'hirb'
 
