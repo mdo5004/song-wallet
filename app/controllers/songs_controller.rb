@@ -24,7 +24,7 @@ class SongsController < ApplicationController
     def update
         @song = Song.find(params[:id])
         if @song.update(song_params)
-            render status: 202
+            render json: @song
         else
             render status: 404
         end
