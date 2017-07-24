@@ -19,6 +19,10 @@ gem 'puma', '~> 3.0'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+# Use JWT for authentication
+gem 'jwt'
+# Use simple_command to connect models and controllers
+gem 'simple_command'
 gem 'pundit'
 gem 'active_model_serializers'
 gem 'chordpro'
