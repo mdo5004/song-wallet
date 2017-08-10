@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 users = User.create([
-    {username:"mdo5004",email:"michaeldavidoconnell@gmail.com",password:"password" },
-    {username:"levmason",email:"levi.s.mason@gmail.com",password:"password"},
-    {username:"ryanomusic",email:"ryanoconnellmusic@gmail.com",password:"password"}])
+    {username:"mdo5004", email:"michaeldavidoconnell@gmail.com", password:"password", first_name:"Michael", last_name:"O'Connell"},
+    {username:"levmason", email:"levi.s.mason@gmail.com", password:"password", first_name:"Levi", last_name:"Mason"},
+    {username:"ryanomusic", email:"ryanoconnellmusic@gmail.com", password:"password", first_name:"Ryan", last_name:"O'Connell"}])
 songs = users[0].songs.create([
     {title:"Stairway to Heaven", artist:"Led Zeppelin", content:"{t:Stairway to Heaven}
 {st:Led Zeppelin}
