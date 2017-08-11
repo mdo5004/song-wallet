@@ -8,6 +8,8 @@
 users = User.create([
     {username:"mdo5004", email:"michaeldavidoconnell@gmail.com", password:"password", first_name:"Michael", last_name:"O'Connell"},
     {username:"levmason", email:"levi.s.mason@gmail.com", password:"password", first_name:"Levi", last_name:"Mason"},
+    {username:"dcarter", email:"daniel.carter@gmail.com", password:"password", first_name:"Daniel", last_name:"Carter"},
+    {username:"acarter", email:"alexa.carter@gmail.com", password:"password", first_name:"Alexa", last_name:"Carter"},
     {username:"ryanomusic", email:"ryanoconnellmusic@gmail.com", password:"password", first_name:"Ryan", last_name:"O'Connell"}])
 songs = users[0].songs.create([
     {title:"Stairway to Heaven", artist:"Led Zeppelin", content:"{t:Stairway to Heaven}
