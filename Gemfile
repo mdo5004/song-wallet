@@ -27,6 +27,8 @@ gem 'pundit'
 gem 'active_model_serializers'
 gem 'chordpro'
 
+gem 'rack-cors', :require => 'rack/cors'
+
 # use foreman to manage multiple processes
 gem 'foreman'
 
