@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     include Pundit
-#    before_action :authenticate_request
+    before_action :authenticate_request
     attr_reader :current_user
 #    protect_from_forgery with: :exception
 

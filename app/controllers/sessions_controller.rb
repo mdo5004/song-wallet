@@ -1,5 +1,5 @@
 class SessionController < ApplicationController
-    
+    skip_before_action :authenticate_request
     def create
         if auth_hash
             @user = User.find_or_create_by(:uid => auth_hash['uid']) do |u|
