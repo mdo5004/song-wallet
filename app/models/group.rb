@@ -1,7 +1,7 @@
 class Group < ApplicationRecord
-    has_many :user_groups
+    has_many :user_groups, dependent: :destroy
     has_many :users, through: :user_groups
-    has_many :group_setlists
+    has_many :group_setlists, dependent: :destroy
     has_many :setlists, through: :group_setlists
     
     

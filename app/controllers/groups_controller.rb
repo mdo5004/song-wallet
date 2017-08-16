@@ -1,45 +1,54 @@
 class GroupsController < ApplicationController
+    skip_before_action :authenticate_request
     def new
         if current_user
             @group = current_user.groups.build 
         else
             @group = Group.new
         end
+        render json: @group
     end
 
     def create
         if current_user
             @group = current_user.groups.create(group_params)
-            
+            render json: @group
         else
-            redirect_to signin_path
+            render body: null, status: 404    
         end
-        redirect_to root_path
+        
     end
 
     def show
         @group = Group.find(params[:id])
+        render json: @group
     end
     
     def edit
         @group = Group.find(params[:id])
+        render json: @group
     end
     
     def update
         @group = Group.find(params[:id])
         if @group.update(group_params)
-            redirect_to group_path(@group) 
+            render json: @group
         else
-            render :edit
+            render body: null, status: 404
         end
     end
     def destroy
         @group = Group.find(params[:id])
         @group.destroy
-        redirect_to root_path
+        render body: null, status: 202
     end
     def index
-        @groups = current_user.groups
+        if current_user
+        @groups = current_user.groups 
+        else 
+            @groups = Group.all
+        end
+        render json: @groups
     end
     private
     def group_params
