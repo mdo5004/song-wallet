@@ -102,8 +102,12 @@ And she's [Fmaj7]buying a stairway [G]to [Am]heaven
         I spill out like a sewer hole yet still receive your kiss. How can
         I measure up to anyone now after such a love as this? (chorus)"}
     ])
-User.first.friends << users[1]
-User.first.friends << users[2]
+m = User.first
+friends << users[1]
+friends << users[2]
 users[1].friends << users[2]
 users[1].songs << songs[1]
 
+i = Group.create(name:"Incubus Tribute Band")
+i.users << User.last
+i.users << User.first
